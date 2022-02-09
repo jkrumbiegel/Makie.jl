@@ -213,7 +213,6 @@ function draw_atomic(scene::Scene, screen::CairoScreen, primitive::Scatter)
         isnan(pos) && return
 
         Cairo.set_source_rgba(ctx, rgbatuple(col)...)
-
         m = convert_attribute(marker, key"marker"(), key"scatter"())
         Cairo.save(ctx)
         if m isa Char
