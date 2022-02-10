@@ -2,6 +2,7 @@
 #                             Lines, LineSegments                              #
 ################################################################################
 
+
 function draw_atomic(scene::Scene, screen::CairoScreen, primitive::Union{Lines, LineSegments})
     fields = @get_attribute(primitive, (color, linewidth, linestyle))
     linestyle = Makie.convert_attribute(linestyle, Makie.key"linestyle"())
