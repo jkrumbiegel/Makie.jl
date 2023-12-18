@@ -210,7 +210,7 @@ jobs:
           version = VersionNumber(toml_data["version"])
           open("ReferenceImages/version.txt", "w") do io
             print(io, "$(version.major).$(version.minor)")
-          end
+          end'
       - uses: actions/upload-artifact@v4
         with:
           name: ReferenceImages
